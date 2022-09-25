@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Header from '../components/header.js'
 import Nav from '../components/nav.js'
 import Content from '../components/content.js'
+import About from '../components/about.js'
 import { useState } from 'react'
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
 
   return (
     <div className = {`bg-amber-100 min-h-screen min-w-screen`}>
+      <Header/>
       <Nav
       navContent = {navContent}
       setNavContent = {data => setNavContent(data)}
@@ -17,6 +19,10 @@ export default function Home() {
       <Content
       navContent = {navContent}
       setNavContent = {data => setNavContent(data)}    
+      />
+      <About
+      navContent = {navContent}
+      setNavContent = {data => setNavContent(data)}      
       />
     </div>
   )

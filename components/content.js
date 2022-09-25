@@ -15,9 +15,9 @@ export default function Content({ navContent, setNavContent }){
     
 
     return(
-        <div className = {`h-80`}>
+        <div className = {`md:hidden`}>
             <motion.div animate = {galleryAnimationControl}>
-                <Image src = {photosPath[navContent]} layout = 'responsive' width = '100' height = '70'/>
+                <Image src = {photosPath[navContent]} layout = 'responsive' width = '100' height = '60'/>
             </motion.div>
         </div>
     )
