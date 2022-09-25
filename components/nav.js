@@ -4,7 +4,7 @@ import { motion, useAnimationControls } from 'framer-motion'
 export default function Nav({navContent, setNavContent}) {
     useEffect(() => {
         navContentAnimation()
-    })
+    }, [navContent])
     const navContentAnimationControl = useAnimationControls()
     const navContentAnimation = () => {
         navContentAnimationControl.start({
@@ -30,7 +30,6 @@ export default function Nav({navContent, setNavContent}) {
                     setNavContent(navContent - 1)
                 }
         }
-        navContentAnimation()
     }
 
     return (
