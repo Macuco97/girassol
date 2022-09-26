@@ -10,7 +10,7 @@ export default function Home() {
   const [navContent, setNavContent] = useState(0)
 
   return (
-    <div className = {`bg-amber-100 min-h-screen min-w-screen`}>
+    <div className = {`bg-amber-50 min-h-screen min-w-screen`}>
       <Header/>
       <Nav
       navContent = {navContent}
