@@ -7,22 +7,24 @@ import About from '../components/about.js'
 import { useState } from 'react'
 
 export default function Home() {
-  const [navContent, setNavContent] = useState(0)
-
+  const [navMobileStatus, setNavMobileStatus] = useState(false)
   return (
     <div className = {`bg-amber-50 min-h-screen min-w-screen`}>
-      <Header/>
+      <Header
+      navMobileStatus = {navMobileStatus}
+      setNavMobileStatus = {data => setNavMobileStatus(data)}      
+      />
       <Nav
-      navContent = {navContent}
-      setNavContent = {data => setNavContent(data)}
+      navMobileStatus = {navMobileStatus}
+      setNavMobileStatus = {data => setNavMobileStatus(data)}
       />
       <Content
-      navContent = {navContent}
-      setNavContent = {data => setNavContent(data)}    
+      navMobileStatus = {navMobileStatus}
+      setNavMobileStatus = {data => setNavMobileStatus(data)}    
       />
       <About
-      navContent = {navContent}
-      setNavContent = {data => setNavContent(data)}      
+      navMobileStatus = {navMobileStatus}
+      setNavMobileStatus = {data => setNavMobileStatus(data)}      
       />
     </div>
   )
